@@ -1,0 +1,17 @@
+set_output_file my_script_output.txt
+
+create_organization "IncIncInc" "contact@inc.com" "Russia"
+
+create_user "BestBoy" "Qwerty123" "Ivan" "Ivanov" "Bashkir" "Russian"
+
+set_access_config "for_ivan", "/api/v0", "https://paragon.paragonbox.com", "IncIncInc", "contact@inc.com", "admin_user@inc.com", "Qwerty123"
+
+use_access_config "for_ivan"
+
+create_business_user "Oleg" "IncIncInc" "BestTeam" "Developer"
+
+show_organizations
+
+login "admin" "Difficult_password"
+
+raw_request_admin "/registry/admin/organizations" GET

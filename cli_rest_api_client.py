@@ -4,6 +4,7 @@ import uuid
 import math
 import datetime
 
+
 default_password = "Qwerty123"
 
 
